@@ -15,3 +15,8 @@
 
 ## Content / Wording
 - Text content and copy for each interview section lives in its own dedicated folder (co-located with that section, not scattered)
+
+## Agents & Skills
+- Project-specific agents live in `.claude/agents/`
+- Project-specific skills live in `.claude/skills/`
+- Read relevant agents/skills before starting a task — they may define expected patterns or workflows for this project
