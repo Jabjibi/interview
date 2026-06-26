@@ -1,0 +1,31 @@
+{
+  "title": "บริบทที่ควรรู้ก่อนเข้าห้องสัมภาษณ์",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "**Metier (Thailand)** คือ Digital Marketing & Technology Agency ทำมา 10+ ปี งานฝั่งเทคที่เกี่ยวกับตำแหน่งนี้คือ: รับทำเว็บไซต์/แอป (Full-Stack + Back Office), Custom Web App/Portal, E-commerce + OMS/Payment, ERP, **CRM & Sales Pipeline**, Workflow Automation & Integrations และ AI Solutions"
+    },
+    { "type": "h3", "text": "สิ่งสำคัญที่สุด" },
+    {
+      "type": "p",
+      "text": "เพราะเป็นเอเจนซีที่ทำหลายโปรเจกต์ให้ลูกค้าหลายแบรนด์ → โจทย์ Assignment 1 (โปรเจกต์ feature/UI คล้ายกัน ต่างกันที่ business logic + design token) **คือ pain จริงในงานประจำวันของเขา** ไม่ใช่โจทย์สมมติ"
+    },
+    {
+      "type": "p",
+      "text": "ดังนั้นเวลาตอบ Assignment 1 ให้ผูกกับสถานการณ์เอเจนซีตลอด เช่น \"เวลารับลูกค้าใหม่ที่อยากได้เว็บโครงคล้ายเดิมแต่เปลี่ยน brand…\""
+    },
+    { "type": "h3", "text": "จุดแข็งของคุณที่ตรงกับเขา" },
+    {
+      "type": "ul",
+      "items": [
+        "full-stack Next.js/React",
+        "automation (n8n)",
+        "integrate API หลายตัว (CrowdStrike, CloudSEK, Slack)"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "ตรงกับงาน Workflow Automation & Integrations ของเขามาก ชูจุดนี้ได้"
+    }
+  ]
+}
