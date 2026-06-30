@@ -8,7 +8,7 @@ import { useSidebarNav } from "@/lib/hooks/sidebar/useSidebarNav"
 import { useSidebarState } from "@/lib/hooks/sidebar/useSidebarState"
 import { mobileDrawerVariants } from "@/lib/motion/variants"
 import { cn } from "@/lib/utils"
-import type { Company } from "@/content/companies"
+import type { Company } from "@/content/metier/types"
 
 type Props = {
   companies: Company[]

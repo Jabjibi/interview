@@ -1,3 +1,9 @@
+export type Company = {
+  id: string
+  name: string
+  shortRole: string
+}
+
 export type FolderSection = {
   id: string
   title: string

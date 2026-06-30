@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { AppSidebar } from "@/components/shared/AppSidebar"
-import { companies } from "@/content/companies"
+import companies from "@/content/companies.json"
 
 export const metadata: Metadata = {
   title: "Interview Prep",

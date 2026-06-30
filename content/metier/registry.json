@@ -1,0 +1,77 @@
+{
+  "technical-assignment": {
+    "cards": [
+      {
+        "title": "ทำไมถึงเลือก Next.js + Supabase?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Next.js ทำให้ทำ frontend กับ API ได้ใน project เดียวเลยครับ ไม่ต้องแยก repo ไม่ต้องจัดการ server แยก deploy บน Vercel ได้ง่ายมาก แค่ push code ก็ขึ้น production ได้เลย"
+          },
+          {
+            "type": "p",
+            "text": "ส่วน Supabase ทำหน้าที่แทนหลายอย่างในคราวเดียว ทั้ง database, file storage สำหรับเก็บรูป และ RLS policy สำหรับควบคุมสิทธิ์ ถ้า setup แยกกันเองจะเสียเวลามากกว่านี้เยอะครับ"
+          }
+        ]
+      },
+      {
+        "title": "แนวทาง validate comment ภาษาไทยทำยังไง?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "ใช้แนวคิด Defense in Depth ครับ คือป้องกัน 3 ชั้น"
+          },
+          {
+            "type": "flow-steps",
+            "items": [
+              {
+                "label": "Frontend",
+                "sub": "ตรวจก่อน submit เลย",
+                "badge": "ชั้น 1",
+                "detail": "ถ้าไม่ผ่านแสดง error ทันที"
+              },
+              {
+                "label": "API Route",
+                "sub": "ตรวจซ้ำอีกรอบ",
+                "badge": "ชั้น 2",
+                "detail": "บางคนอาจข้าม UI แล้วยิง API ตรงๆ ได้"
+              },
+              {
+                "label": "Database Constraint",
+                "sub": "safety net",
+                "badge": "ชั้น 3",
+                "detail": "แม้ code จะมี bug หรือมีคนเข้าถึง database โดยตรงก็ยัง block ข้อมูลที่ไม่ถูกต้องได้"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "ระบบ admin auth ทำงานยังไง?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "ใช้ bcrypt hash password เก็บใน admins table ครับ ไม่ได้ใช้ Supabase Auth เพราะ admin มีคนเดียว ไม่มี register flow ไม่จำเป็นต้องใช้ระบบที่ซับซ้อนขนาดนั้น"
+          },
+          {
+            "type": "flow-steps",
+            "items": [
+              {
+                "label": "Login",
+                "detail": "bcrypt เปรียบ password กับ hash ใน admins table"
+              },
+              {
+                "label": "Session",
+                "detail": "insert session ลง database แล้วเก็บ session id ใน httpOnly cookie"
+              },
+              {
+                "label": "Middleware",
+                "detail": "ตรวจ cookie ทุก request ที่เข้า /admin/* ถ้าไม่มีหรือ expired redirect กลับหน้า login"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import type { FolderSection, SectionContent } from "./metier/types"
-import { metierSections } from "./metier/sections"
-import { sectionRegistry as metierRegistry } from "./metier/registry"
+import metierSectionsRaw from "./metier/sections.json"
+import metierRegistryRaw from "./metier/registry.json"
 
 export type CompanyContent = {
   sections: FolderSection[]
@@ -8,5 +8,8 @@ export type CompanyContent = {
 }
 
 export const companyContent: Record<string, CompanyContent> = {
-  metier: { sections: metierSections, registry: metierRegistry },
+  metier: {
+    sections: metierSectionsRaw as FolderSection[],
+    registry: metierRegistryRaw as Record<string, SectionContent>,
+  },
 }

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "technical-assignment",
+    "title": "Technical Assignment",
+    "tag": "กลุ่มที่ 1",
+    "subtitle": "ถามเรื่อง Technical Assignment โดยตรง",
+    "previewLines": [
+      "ทำไมถึงเลือก Next.js + Supabase?",
+      "แนวทาง validate comment ภาษาไทยทำยังไง?",
+      "ระบบ admin auth ทำงานยังไง?"
+    ]
+  }
+]

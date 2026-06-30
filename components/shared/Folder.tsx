@@ -63,8 +63,11 @@ export default function Folder({
   const paper3 = "#ffffff"
 
   const handleClick = () => {
-    toggle()
-    onClick?.()
+    if (onClick) {
+      onClick()
+    } else {
+      toggle()
+    }
   }
 
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {

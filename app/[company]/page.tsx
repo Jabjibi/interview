@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { InterviewGrid } from "@/components/metier/InterviewGrid"
 import { companyContent } from "@/content/index"
-import { companies } from "@/content/companies"
+import companies from "@/content/companies.json"
 
 type Props = {
   params: Promise<{ company: string }>

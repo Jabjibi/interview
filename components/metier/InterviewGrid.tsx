@@ -4,6 +4,7 @@ import { FolderCard } from "@/components/shared/FolderCard"
 import { FlashcardDialog } from "@/components/shared/FlashcardDialog"
 import { useDialogState } from "@/lib/hooks/dialog/useDialogState"
 import { useFlashcard } from "@/lib/hooks/flashcard/useFlashcard"
+import { getFolderHue } from "@/lib/hooks/folder/folderColors"
 import type { FolderSection, SectionContent } from "@/content/metier/types"
 
 type Props = {
@@ -16,7 +17,8 @@ export function InterviewGrid({ sections, registry }: Props) {
 
   const activeContent = selectedId ? registry[selectedId] : null
   const cards = activeContent?.cards ?? []
-  const activeSection = sections.find((s) => s.id === selectedId)
+  const activeIndex = selectedId ? sections.findIndex((s) => s.id === selectedId) : 0
+  const activeColor = getFolderHue(activeIndex).color
 
   const { index, total, next, prev, canNext, canPrev } = useFlashcard(cards.length)
 
@@ -35,20 +37,19 @@ export function InterviewGrid({ sections, registry }: Props) {
         ))}
       </div>
 
-      {activeSection && card && (
+      {card && (
         <FlashcardDialog
           open={!!selectedId}
           onClose={closeDialog}
-          title={activeSection.title}
+          card={card}
           cardNumber={index + 1}
           total={total}
+          color={activeColor}
           onNext={next}
           onPrev={prev}
           canNext={canNext}
           canPrev={canPrev}
-        >
-          <h3 className="text-lg font-bold text-zinc-900 mb-3">{card.title}</h3>
-        </FlashcardDialog>
+        />
       )}
     </>
   )

@@ -21,21 +21,15 @@ export function FolderCard({ section, index, onClick }: Props) {
   ))
 
   return (
-    <div className="flex flex-col items-center gap-6 w-[200px]">
-      <button
+    <div className="flex flex-col items-center gap-2 w-[120px]">
+      <Folder
+        color={hue.color}
+        size={1}
+        items={papers}
         onClick={() => onClick(section.id)}
-        aria-label={`เปิดอ่าน ${section.title}`}
-        className="block focus:outline-none"
-      >
-        <Folder color={hue.color} size={1.6} items={papers} />
-      </button>
+      />
 
-      <div className="text-center">
-        <h2 className="text-sm font-semibold text-zinc-900">{section.title}</h2>
-        <p className="mt-1 text-xs text-zinc-500">
-          {section.tag} · {section.subtitle}
-        </p>
-      </div>
+      <p className="text-[11px] font-medium text-zinc-700 text-center leading-tight">{section.title}</p>
     </div>
   )
 }
