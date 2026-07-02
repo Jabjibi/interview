@@ -1,0 +1,25 @@
+[
+  {
+    "id": "intro",
+    "title": "แนะนำตัว",
+    "tag": "กลุ่มที่ 1",
+    "subtitle": "บอกเล่าประวัติและประสบการณ์",
+    "previewLines": [
+      "จบ CS จากเกษตรศาสตร์ ศรีราชา",
+      "ฝึกงาน Bangkok MSP 6 เดือน — Software Developer Intern",
+      "มองตัวเองใน 3 ปี: เชี่ยวชาญ C# และ MS SQL",
+      "ทำไมสมัคร C#/.NET ทั้งที่ Stack หลักเป็น TypeScript?"
+    ]
+  },
+  {
+    "id": "technical",
+    "title": "ความรู้ทางเทคนิค",
+    "tag": "กลุ่มที่ 2",
+    "subtitle": "OOP / DBMS / SQL vs NoSQL",
+    "previewLines": [
+      "OOP — Encapsulation, Inheritance, Polymorphism, Abstraction",
+      "DBMS vs RDBMS — โครงสร้าง, ความสัมพันธ์, ACID",
+      "SQL vs NoSQL — ใช้อันไหนตอนไหน"
+    ]
+  }
+]

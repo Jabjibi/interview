@@ -1,3 +1,4 @@
 [
-  { "id": "metier", "name": "Metier", "shortRole": "SoftDev" }
+  { "id": "metier", "name": "Metier", "shortRole": "SoftDev" },
+  { "id": "chanwanich", "name": "Chanwanich", "shortRole": "SoftDev" }
 ]
